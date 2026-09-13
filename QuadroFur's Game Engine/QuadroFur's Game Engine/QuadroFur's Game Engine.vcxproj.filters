@@ -13,10 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Engine Files">
+      <UniqueIdentifier>{eec9b9d8-5c8d-42ed-bcd5-c8b4d6daa1ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Headder">
+      <UniqueIdentifier>{feea80f8-6bec-4639-a7e7-a5f5b81dc374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Source">
+      <UniqueIdentifier>{d0bf4ed2-e695-4585-b2df-b0cc36fbb8ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Engine Files\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Engine Files\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Engine Files\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.h">
+      <Filter>Engine Files\Headder</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Engine Files\Headder</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Engine Files\Headder</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimDataStruct.h">
+      <Filter>Engine Files\Headder</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
