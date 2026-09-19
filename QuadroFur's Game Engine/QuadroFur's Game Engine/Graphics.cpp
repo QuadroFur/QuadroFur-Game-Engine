@@ -14,7 +14,7 @@ bool Graphics::LoadTexture(std::string Path, std::string TextureName) {
 	std::cerr << "Texture did not load! Incorrect path provided, or an error occured!" << std::endl;
 	return false;
 }
-bool Graphics::LoadAnimation(std::string AnimationName, Actor* Actor, std::vector<std::string>Textures, int TileSizeX, int TileSizeY, int TileLeft, int TileTop, int NumOfFrames, bool Orentation) {
+bool Graphics::LoadAnimation(std::string AnimationName, Actor* Actor, std::vector<std::string>Textures, int TileLeft, int TileTop, int NumOfFrames, int TileSizeX, int TileSizeY, bool Orentation) {
 	if (Actor->AnimSets.find(AnimationName) != Actor->AnimSets.end()) {
 		std::cerr << "Animation with provided name already exists in map! Skipping..." << std::endl;
 		return false;
@@ -79,4 +79,19 @@ void Graphics::Render(sf::RenderWindow& Window, sf::Clock& Clock) {
 			}
 		}
 	}
+}
+
+Graphics::~Graphics() {
+	for (auto& i : RenderMap) {
+		if (i.second != nullptr) {
+			delete i.second;
+		}
+	}
+	RenderMap.clear();
+	for (auto& i : TextureMap) {
+		if (i.second != nullptr) {
+			delete i.second;
+		}
+	}
+	TextureMap.clear();
 }
