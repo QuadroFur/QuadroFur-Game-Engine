@@ -162,7 +162,7 @@ flac.lib;
 vorbisenc.lib;
 vorbisfile.lib;
 vorbis.lib;
-ogg.lib</AdditionalDependencies>
+ogg.lib;openal32.lib</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
