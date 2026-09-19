@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="QuadroFur's Game Engine/QuadroFur's Game Engine.vcxproj" />
+  <Project Path="QuadroFur's Game Engine/QuadroFur's Game Engine.vcxproj" Id="099ca77b-b263-461d-80a3-ae38fc99d2d1" />
 </Solution>

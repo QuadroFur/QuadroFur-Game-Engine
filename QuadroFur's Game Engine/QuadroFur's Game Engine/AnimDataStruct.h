@@ -11,6 +11,7 @@ struct AnimDataStruct {
 	int TileLeft;
 	int TileTop;
 	int NumFrames{ 0 };
+	bool Orentation = false; //False = Horizontal, true = vertical.
 	bool Looped = false;
 	int CurrentFrame = 0;
 	sf::Time FrameTime{ sf::seconds(1.0f / 2.0f) };
