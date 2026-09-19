@@ -66,9 +66,16 @@ void Graphics::Render(sf::RenderWindow& Window, sf::Clock& Clock) {
 				i.second->LoadedAnimSet.CurrentFrame++;
 			}
 			else {
-				//Spritesheet code
-				//Handle SizeX, SizeY, TileLeft, TileTop.
-				//Grid style, also figure out direction (horizontal / vertical).
+				//Surprisingly, easier than the old way - See Scrap Colony engine (Sept. 2026).
+				if (i.second->LoadedAnimSet.Orentation == false) //Horizontal
+				{
+					int LeftSide = i.second->LoadedAnimSet.TileLeft + (i.second->LoadedAnimSet.TileSizeX * i.second->LoadedAnimSet.NumFrames);
+					i.second->Sprite->setTextureRect(sf::IntRect({ LeftSide, i.second->LoadedAnimSet.TileTop }, { i.second->LoadedAnimSet.TileSizeX, i.second->LoadedAnimSet.TileSizeY }));
+				}
+				else { //Vertical
+					int TopSide = i.second->LoadedAnimSet.TileTop + (i.second->LoadedAnimSet.TileSizeY * i.second->LoadedAnimSet.NumFrames);
+					i.second->Sprite->setTextureRect(sf::IntRect({ i.second->LoadedAnimSet.TileLeft, TopSide }, { i.second->LoadedAnimSet.TileSizeX, i.second->LoadedAnimSet.TileSizeY }));
+				}
 			}
 		}
 	}
