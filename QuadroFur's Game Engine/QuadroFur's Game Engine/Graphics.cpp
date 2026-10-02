@@ -37,8 +37,8 @@ bool Graphics::SetLoadedAnimation(std::string AnimationName, Actor* Actor) {
 		return false;
 	}
 	Actor->LoadedAnimSet = Actor->AnimSets[AnimationName];
-	if (Actor->Sprite == nullptr) Actor->Sprite = new sf::Sprite(*TextureMap[Actor->LoadedAnimSet.TextureNames[1]]);
-	else Actor->Sprite->setTexture(*TextureMap[Actor->LoadedAnimSet.TextureNames[1]]);
+	if (Actor->Sprite == nullptr) Actor->Sprite = new sf::Sprite(*TextureMap[Actor->LoadedAnimSet.TextureNames[0]]);
+	else Actor->Sprite->setTexture(*TextureMap[Actor->LoadedAnimSet.TextureNames[0]]);
 	return true;
 }
 void Graphics::SetVisible(std::string ActorName, Actor* Actor) {
