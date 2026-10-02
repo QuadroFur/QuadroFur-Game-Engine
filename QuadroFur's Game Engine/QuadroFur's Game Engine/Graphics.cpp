@@ -78,6 +78,9 @@ void Graphics::Render(sf::RenderWindow& Window, sf::Clock& Clock) {
 				}
 			}
 		}
+		i.second->Sprite->setPosition(i.second->Position);
+		i.second->Sprite->setScale(i.second->Scale);
+		Window.draw(*i.second->Sprite);
 	}
 }
 
