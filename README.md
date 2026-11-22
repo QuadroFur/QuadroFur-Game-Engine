@@ -15,3 +15,5 @@ If you are a decently advanced user... Then I have no idea why you are here. If 
 ## How to run the engine:
 
 Download the source code, specifically the zip file like any other github project, unzip the project, and load it in Visual Studio (2026+, 2022 may not work). From there, the main file you want to be working in is `main.cpp`, but feel free to mess around with any other files. It's your game engine as much as it is mine!
+
+I am going to make an official release version of this eventually, but do not feel like it's at that stage yet, as it has a few missing features, design flaws, etc.
